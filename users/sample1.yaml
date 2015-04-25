@@ -1,0 +1,29 @@
+sampleDate:
+  skillset:
+    - title: front-end
+      skill1: 4
+      skill2: 3
+      skill3: 6
+      skill4: 2
+      skill5: 8
+      skill6: 5
+      skill7: 5
+      skill8: 7
+    - title: back-end
+      skill1: 4
+      skill2: 3
+      skill3: 6
+      skill4: 2
+      skill5: 8
+      skill6: 5
+      skill7: 5
+      skill8: 7
+    - title: sysops
+      skill1: 4
+      skill2: 3
+      skill3: 6
+      skill4: 2
+      skill5: 8
+      skill6: 5
+      skill7: 5
+      skill8: 7

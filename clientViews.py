@@ -16,9 +16,10 @@ def blog():
 def admin():
     return 'All Employees'
 
-@app.route('/employee/<employee_id>/')
-def employee():
-    return 'Employee'
+@app.route('/candidate/<candidate_id>/')
+def candidate(candidate_id):
+    print candidate_id
+    return render_template('candidateView.jinja2')
 
 @app.route('/team/<team_id>/')
 def team():
