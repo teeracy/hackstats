@@ -4,7 +4,7 @@ var w = 400,
 var colorscale = d3.scale.category10();
 
 //Legend titles
-var LegendOptions = ['Candidate #1','Candidate #2', 'Candidate #3'];
+var LegendOptions = ['Candidate #1'];
 
 //Data
 var d = [
@@ -112,7 +112,7 @@ var mycfg = {
 
 //Call function to draw the Radar chart
 //Will expect that data is in %'s
-data = [d[1]]
+data = [d[0]]
 RadarChart.draw("#chart", data, mycfg);
 
 ////////////////////////////////////////////

@@ -5,6 +5,20 @@ body {
   font-family: "Helvetica Neue", Helvetica;
 }
 
+.controller{
+  text-align: left;
+}
+
+.controller ul li{
+  display: inline-block;
+  font-weight: 300;
+}
+
+.controller ul li:hover{
+  cursor: pointer;
+  color: #2aad94;
+}
+
 #chart {
   text-align: center;
 }
@@ -27,6 +41,29 @@ body {
   stroke: none;
 }
 
+.options-container h1{
+  margin-left: 40px;
+  font-weight: 400;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+}
+
+a:hover{
+  color: #2aad94;
+  color: #2aad94;
+}
+
+ul{
+  list-style-type: none;
+}
+
+ul li{
+  margin-bottom: 10px;
+}
 
 html, body {
   margin:0px auto;
@@ -36,11 +73,7 @@ html, body {
   position:absolute;
   left:0px;
   bottom:0px;}
-
-.nav-container{
-  margin-bottom: 30px;
-}
-  
+    
 .row {
   text-align: center;}
 
@@ -53,7 +86,7 @@ html, body {
   font-size:20px;}
 
 .subtittle a {
-  color:#00aed7;
+  color:#2aad94;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -128,7 +161,7 @@ nav ul li a {
 
 nav li a:hover,
 nav li a.selected {
-  color:#00aed7;}
+  color:#2aad94;}
 
 .sticky {
   position: fixed;
@@ -263,7 +296,7 @@ footer {
 #down_button_contact a {
   width:180px;
   padding: 0px;
-  background-color: #00aed7;
+  background-color: #2aad94;
   font-family:'OpenSansRegular', serif;
   font-size:13px;
   color:#FFF;
@@ -391,8 +424,8 @@ footer {
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 10px 20px;
-  background: #00aed7;
-  border: 3px solid #00aed7;
+  background: #2aad94;
+  border: 3px solid #2aad94;
   display: inline-block;
   margin: 30px 0 0;
   outline: none;
@@ -464,7 +497,7 @@ footer {
 
 .portraits .poste {
   color: #FFFFFF;
-  background-color: #00aed7;
+  background-color: #2aad94;
   font-size:13px;
   text-transform: uppercase;
   padding: 2px 8px;
@@ -521,8 +554,8 @@ footer {
   -ms-transition:all .3s ease-in-out;
   -o-transition:all .3s ease-in-out;
   -webkit-transition:all .3s ease-in-out;
-  background:#00aed7;
-  border:2px solid #00aed7;
+  background:#2aad94;
+  border:2px solid #2aad94;
   color:#FFF;
   font-size:12px;
   height:40px;
@@ -556,8 +589,8 @@ footer {
   background:#FFF url(../img/valid.png);
   background-position:98% 5px;
   background-repeat:no-repeat;
-  border-color:#00aed7;
-  color:#00aed7;}
+  border-color:#2aad94;
+  color:#2aad94;}
 
 /* INPUT AND TEXTAREA WHEN INVALID : NOT GOOD GOES RED */
 
@@ -593,7 +626,7 @@ footer {
   margin-top:30px;}
 
 #contact .info a {
-  color:#00aed7;
+  color:#2aad94;
   letter-spacing:1px;
   text-decoration:none;
   -webkit-transition:all .3s ease-in-out;
@@ -637,7 +670,7 @@ footer {
         transition:all .3s ease-in-out;}
     
       .tweet_list li a:hover {
-        color:#00aed7;}
+        color:#2aad94;}
     
     .tweet_list .tweet_even {
       background-color: #FFF;}
@@ -705,5 +738,5 @@ footer {
   transition:all .5s ease-in-out;}
   
 .icon:hover{
-  color:#00aed7;}
+  color:#2aad94;}
 
