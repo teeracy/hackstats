@@ -1,74 +1,119 @@
-var w = 500,
-	h = 500;
+var w = 400,
+	h = 400;
 
 var colorscale = d3.scale.category10();
 
 //Legend titles
-var LegendOptions = ['Candidate #1','Candidate #2'];
+var LegendOptions = ['Candidate #1','Candidate #2', 'Candidate #3'];
 
 //Data
 var d = [
 		  [
-			{axis:"Email",value:0.59},
-			{axis:"Social Networks",value:0.56},
-			{axis:"Internet Banking",value:0.42},
-			{axis:"News Sportsites",value:0.34},
-			{axis:"Search Engine",value:0.48},
-			{axis:"View Shopping sites",value:0.14},
-			{axis:"Paying Online",value:0.11},
-			{axis:"Buy Online",value:0.05},
-			{axis:"Stream Music",value:0.07},
-			{axis:"Online Gaming",value:0.12},
-			{axis:"Navigation",value:0.27},
-			{axis:"App connected to TV program",value:0.03},
-			{axis:"Offline Gaming",value:0.12},
-			{axis:"Photo Video",value:0.4},
-			{axis:"Reading",value:0.03},
-			{axis:"Listen Music",value:0.22},
-			{axis:"Watch TV",value:0.03},
-			{axis:"TV Movies Streaming",value:0.03},
-			{axis:"Listen Radio",value:0.07},
-			{axis:"Sending Money",value:0.18},
-			{axis:"Other",value:0.07},
-			{axis:"Use less Once week",value:0.08}
+			{axis:"HTML",value:0.59},
+			{axis:"Semantic Markup",value:0.48},
+			{axis:"CSS",value:0.56},
+			{axis:"Grid Frameworks",value:0.11},
+			{axis:"Javascript",value:0.42},
+			{axis:"MVC",value:0.34},
+			{axis:"Progressive Enhancement",value:0.14},
+			{axis:"Site Performance",value:0.05},
 		  ],[
-			{axis:"Email",value:0.48},
-			{axis:"Social Networks",value:0.41},
-			{axis:"Internet Banking",value:0.27},
-			{axis:"News Sportsites",value:0.28},
-			{axis:"Search Engine",value:0.46},
-			{axis:"View Shopping sites",value:0.29},
-			{axis:"Paying Online",value:0.11},
-			{axis:"Buy Online",value:0.14},
-			{axis:"Stream Music",value:0.05},
-			{axis:"Online Gaming",value:0.19},
-			{axis:"Navigation",value:0.14},
-			{axis:"App connected to TV program",value:0.06},
-			{axis:"Offline Gaming",value:0.24},
-			{axis:"Photo Video",value:0.17},
-			{axis:"Reading",value:0.15},
-			{axis:"Listen Music",value:0.12},
-			{axis:"Watch TV",value:0.1},
-			{axis:"TV Movies Streaming",value:0.14},
-			{axis:"Listen Radio",value:0.06},
-			{axis:"Sending Money",value:0.16},
-			{axis:"Other",value:0.07},
-			{axis:"Use less Once week",value:0.17}
+			{axis:"HTML",value:0.72},
+			{axis:"Semantic Markup",value:0.57},
+			{axis:"CSS",value:0.689},
+			{axis:"Grid Frameworks",value:0.22},
+			{axis:"Javascript",value:0.64},
+			{axis:"MVC",value:0.55},
+			{axis:"Progressive Enhancement",value:0.23},
+			{axis:"Site Performance",value:0.35},
+		  ],[
+			{axis:"HTML",value:0.28},
+			{axis:"Semantic Markup",value:0.66},
+			{axis:"CSS",value:0.33},
+			{axis:"Grid Frameworks",value:0.73},
+			{axis:"Javascript",value:0.62},
+			{axis:"MVC",value:0.74},
+			{axis:"Progressive Enhancement",value:0.34},
+			{axis:"Site Performance",value:0.41},
 		  ]
-		];
+];
+
+var e = [
+	  [
+		{axis:"Security",value:0.59},
+		{axis:"SQL",value:0.22},
+		{axis:"NoSQL",value:0.44},
+		{axis:"Performance",value:0.37},
+		{axis:"Scaling",value:0.66},
+		{axis:"Architecture",value:0.18},
+		{axis:"Deployment",value:0.49},
+		{axis:"Frameworks",value:0.72 },
+	  ],[
+		{axis:"Security",value:0.59},
+		{axis:"SQL",value:0.48},
+		{axis:"NoSQL",value:0.56},
+		{axis:"Performance",value:0.11},
+		{axis:"Scaling",value:0.42},
+		{axis:"Architecture",value:0.34},
+		{axis:"Deployment",value:0.14},
+		{axis:"Frameworks",value:0.05},
+	  ],[
+		{axis:"Security",value:0.59},
+		{axis:"SQL",value:0.48},
+		{axis:"NoSQL",value:0.56},
+		{axis:"Performance",value:0.11},
+		{axis:"Scaling",value:0.42},
+		{axis:"Architecture",value:0.34},
+		{axis:"Deployment",value:0.14},
+		{axis:"Frameworks",value:0.05},
+	  ]
+];
+
+var f = [
+	  [
+		{axis:"Wireframing",value:0.59},
+		{axis:"Color",value:0.48},
+		{axis:"Typography",value:0.56},
+		{axis:"Illustration",value:0.11},
+		{axis:"Scaling",value:0.42},
+		{axis:"Architecture",value:0.34},
+		{axis:"Deployment",value:0.14},
+		{axis:"Frameworks",value:0.05},
+	  ],[
+		{axis:"Security",value:0.59},
+		{axis:"SQL",value:0.48},
+		{axis:"NoSQL",value:0.56},
+		{axis:"Performance",value:0.11},
+		{axis:"Scaling",value:0.42},
+		{axis:"Architecture",value:0.34},
+		{axis:"Deployment",value:0.14},
+		{axis:"Frameworks",value:0.05},
+	  ],[
+		{axis:"Security",value:0.59},
+		{axis:"SQL",value:0.48},
+		{axis:"NoSQL",value:0.56},
+		{axis:"Performance",value:0.11},
+		{axis:"Scaling",value:0.42},
+		{axis:"Architecture",value:0.34},
+		{axis:"Deployment",value:0.14},
+		{axis:"Frameworks",value:0.05},
+	  ]
+];
+
 
 //Options for the Radar chart, other than default
 var mycfg = {
   w: w,
   h: h,
-  maxValue: 0.6,
-  levels: 6,
+  maxValue: 1,
+  levels: 10,
   ExtraWidthX: 300
 }
 
 //Call function to draw the Radar chart
 //Will expect that data is in %'s
-RadarChart.draw("#chart", d, mycfg);
+data = [d[1]]
+RadarChart.draw("#chart", data, mycfg);
 
 ////////////////////////////////////////////
 /////////// Initiate legend ////////////////
@@ -88,7 +133,6 @@ var text = svg.append("text")
 	.attr("y", 10)
 	.attr("font-size", "12px")
 	.attr("fill", "#404040")
-	.text("What % of owners use a specific service in a week");
 		
 //Initiate Legend	
 var legend = svg.append("g")

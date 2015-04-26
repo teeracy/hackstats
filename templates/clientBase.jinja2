@@ -14,22 +14,11 @@
 			<nav>
 				<div id="logo"><a href="/"><img src="{{ url_for('static', filename='hackstats-logotype-small.png') }}"></a>
 				<ul>
-					<li><a href="#home" class="selected">Home</a></li>
-					<li><a href="#narrative">What</a></li>
-					<li><a href="#musicvideos">Why</a></li>
-		         	<li><a href="#documentary">How</a></li>
-					<li><a href="#promotional">Who</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="/candidate/" class="selected">Candidate</a></li>
+					<li><a href="/team/">Team</a></li>
 				</ul> 
 			</nav>
 		</div> 
 	  	{% block body %}{% endblock %}
-	  	<footer>
-		  	<div class="row">
-			    <div class="twelve columns">
-			    	<img alt="YOURLOGO" src="img/hackstats-logotype-small.png">
-			    </div>
-		    </div>
-		</footer>
 	</body>
 </html>

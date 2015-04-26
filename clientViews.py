@@ -16,16 +16,13 @@ def blog():
 def admin():
     return 'All Employees'
 
-@app.route('/candidate/<candidate_id>/')
-def candidate(candidate_id):
-    print candidate_id
-    return render_template('candidateView.jinja2')
+@app.route('/candidate/')
+def candidate():
+    return render_template('statsView.jinja2')
 
-@app.route('/team/<team_id>/')
+@app.route('/team/')
 def team():
-    return 'Team'
-
-
+    return render_template('statsView.jinja2')
 
 if __name__ == '__main__':
     app.run(debug=True)
