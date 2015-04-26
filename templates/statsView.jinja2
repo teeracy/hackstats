@@ -4,7 +4,14 @@
 	<div id="body">
 	    <div id="chart">
 	    	<div class="controller">
-	    		{% if teamMember %}
+	    		{% if hiring %}
+		    		<ul>
+			    		<li class="one">Tan Pear</li>   |    
+			    		<li class="two">Orange Sun</li>   |    
+			    		<li class="three">Black Bike</li>   |    
+			    		<li class="four">Maroon Flag</li>
+		    		</ul>
+	    		{% elif teamMember %}
 		    		<ul>
 		    			<li>
 		    				{% if teamMember == "1" %}
@@ -12,21 +19,6 @@
 							{% elif teamMember == "2" %}
 								Blue Umbrella:
 							{% elif teamMember == "3" %}
-								Green Chair:
-							{% endif %}
-		    			</li>
-			    		<li class="two-years">2 Years Ago</li>   |    
-			    		<li class="one-year">1 Year Ago</li>   |    
-			    		<li class="current">Current</li>
-		    		</ul>
-		    	{% elif comparison and candidate %}
-		    		<ul>
-		    			<li>
-		    				{% if candidate == "1" %}
-								Yellow Pumpkin:
-							{% elif candidate == "2" %}
-								Blue Umbrella:
-							{% elif candidate == "3" %}
 								Green Chair:
 							{% endif %}
 		    			</li>
@@ -45,5 +37,13 @@
 		<script type="text/javascript" src="{{ url_for('static', filename='candidate2.js') }}"></script>
 	{% elif teamMember == "3" %}
 		<script type="text/javascript" src="{{ url_for('static', filename='candidate3.js') }}"></script>
+	{% elif candidate == "1" %}
+		<script type="text/javascript" src="{{ url_for('static', filename='person1.js') }}"></script>
+	{% elif candidate == "2" %}
+		<script type="text/javascript" src="{{ url_for('static', filename='person2.js') }}"></script>
+	{% elif candidate == "3" %}
+		<script type="text/javascript" src="{{ url_for('static', filename='person3.js') }}"></script>
+	{% elif hiring %}
+		<script type="text/javascript" src="{{ url_for('static', filename='hiring.js') }}"></script>
 	{% endif %}
 {% endblock %}

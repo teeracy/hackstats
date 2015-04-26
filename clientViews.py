@@ -26,6 +26,12 @@ def teamMembers(team_id):
     	teamMember=team_id,
     )
 
+@app.route('/hiring/')
+def hiring():
+    return render_template('statsView.jinja2',
+    	hiring=True
+    )
+
 @app.route('/candidate/')
 def candidates():
     return render_template('candidates.jinja2')
